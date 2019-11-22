@@ -1,7 +1,14 @@
-Config
-<pre class="config-example">
-{{ config | json }}
-</pre>
+<div class="code-shell">
+    <div class="code-shell__column">
+        <span>Server config</span>
+        <pre class="code-shell__column__code">{{ configDef | json }}</pre>
+    </div>
 
-<br/>
+    <div class="code-shell__column">
+        <span>Config</span>
+        <pre class="code-shell__column__code">{{ config | json }}</pre>
+    </div>
+</div>
+
+<br />
 <div #componentOutlet></div>

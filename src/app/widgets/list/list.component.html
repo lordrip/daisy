@@ -1,1 +1,14 @@
-<p>list works!</p>
+<span>{{ config?.description }}</span>
+<mat-divider></mat-divider>
+
+<form>
+    <mat-form-field>
+        <input #inputRef matInput [placeholder]="config?.options?.placeholder" [value]="inputValue">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="addValue(inputRef.value)">Add</button>
+</form>
+
+<mat-list>
+    <mat-list-item *ngFor="let item of config?.defaultValue">{{ item }}</mat-list-item>
+</mat-list>

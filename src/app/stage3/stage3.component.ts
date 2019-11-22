@@ -13,6 +13,7 @@ export class Stage3Component implements OnInit {
 
   @ViewChild('componentOutlet', { read: ViewContainerRef, static: true }) componentOutlet: ViewContainerRef;
   config: { [index: string]: unknown };
+  configDef: ConfigModel;
 
   constructor(
     private readonly componentFactoryResolver: ComponentFactoryResolver,
@@ -22,6 +23,7 @@ export class Stage3Component implements OnInit {
   ngOnInit() {
     this.httpClient.get('assets/config.json')
       .subscribe((config: ConfigModel) => {
+        this.configDef = config;
         this.config = this.getDefaultConfig(config);
         this.bootstrapConfigComponents(config);
       });

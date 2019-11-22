@@ -3,7 +3,7 @@
     "configProp": "debugInfo",
     "widget": "radio",
     "defaultValue": false,
-    "description": "Do you wanna send debug info?/",
+    "description": "Do you wanna send debug info?",
     "options": [
       {
         "description": "Yeah!",
@@ -16,14 +16,28 @@
     ]
   },
   {
-    "configProp": "config2",
+    "configProp": "detailLevel",
     "widget": "slider",
-    "defaultValue": 15,
-    "description": "This is a dynamic slider control",
+    "defaultValue": 20,
+    "description": "Choose the detail level",
     "options": {
       "min": 0,
       "max": 100,
       "step": 10
+    }
+  },
+  {
+    "configProp": "maskingRules",
+    "widget": "list",
+    "defaultValue": [
+      "~/",
+      "~/apps",
+      "~/Documents"
+    ],
+    "description": "Please specify where should we look",
+    "options": {
+      "placeholder": "Path",
+      "defaultValue": ""
     }
   }
 ]
