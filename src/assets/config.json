@@ -1,0 +1,29 @@
+[
+  {
+    "configProp": "debugInfo",
+    "widget": "radio",
+    "defaultValue": false,
+    "description": "Do you wanna send debug info?/",
+    "options": [
+      {
+        "description": "Yeah!",
+        "value": true
+      },
+      {
+        "description": "There's no way in heaven that this could happen",
+        "value": false
+      }
+    ]
+  },
+  {
+    "configProp": "config2",
+    "widget": "slider",
+    "defaultValue": 15,
+    "description": "This is a dynamic slider control",
+    "options": {
+      "min": 0,
+      "max": 100,
+      "step": 10
+    }
+  }
+]

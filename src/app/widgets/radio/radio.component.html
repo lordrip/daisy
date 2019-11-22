@@ -1,0 +1,14 @@
+<mat-radio-group
+    [value]="config?.defaultValue"
+    (change)="changeValue($event)">
+
+    {{ config?.description }}
+    <br/>
+
+    <mat-radio-button
+        *ngFor="let item of config?.options"
+        [value]="item.value">
+        {{item?.description}}
+    </mat-radio-button>
+
+</mat-radio-group>

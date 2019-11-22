@@ -1,0 +1,10 @@
+{{ config?.description }}
+<br/>
+
+<mat-slider
+    thumbLabel
+    [value]="config?.defaultValue"
+    [min]="config?.options?.min"
+    [max]="config?.options?.max"
+    [step]="config?.options?.step"
+    (change)="changeValue($event)"></mat-slider>

@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { Stage1Module } from './stage1/stage1.module';
 import { Stage2Module } from './stage2/stage2.module';
+import { Stage3Module } from './stage3/stage3.module';
+
+const routes: Routes = [];
 
 @NgModule({
   declarations: [
@@ -15,7 +18,8 @@ import { Stage2Module } from './stage2/stage2.module';
     SharedModule,
     Stage1Module,
     Stage2Module,
-    AppRoutingModule,
+    Stage3Module,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
